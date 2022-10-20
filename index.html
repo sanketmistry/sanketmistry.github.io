@@ -551,6 +551,22 @@
         ga('create', 'UA-46465113-4', 'auto');
         ga('send', 'pageview');
     </script>
+    <script>
+        // Google map
+function initMap() {
+    var location = {lat: 19.21371216164888, lng: 72.84921718465779};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: location,
+        scrollwheel: false
+    });
+
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+    </script>
 </body>
 
 </html>
