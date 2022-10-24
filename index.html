@@ -562,34 +562,7 @@ function initMap() {
 }
     </script>
 
-    <script>
-        /********************** RSVP **********************/
-$('#rsvp-form').on('submit', function (e) {
-    e.preventDefault();
-    var data = $(this).serialize();
-
-    $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
-
-    //if (($('#invite_code').val()) !== '021222') {
-    //    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code ',($('#invite_code').val()),' is incorrect.'));
-    //} else {
-        $.post('https://script.google.com/macros/s/AKfycbyi8H-LsLtmXQ1BjWLuEiprru7qaA_4Okv5LA7Wu1pJKg-vXSO3QHTgNY3foUiDYSmu/exec', data)
-            .done(function (data) {
-                console.log(data);
-                if (data.result === "error") {
-                    $('#alert-wrapper').html(alert_markup('danger', data.message));
-                } else {
-                    $('#alert-wrapper').html('');
-                    $('#rsvp-modal').modal('show');
-                }
-            })
-            .fail(function (data) {
-                console.log(data);
-                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
-            });
-    //}
-});
-    </script>
+    
 </body>
 
 </html>
