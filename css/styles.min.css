@@ -5,7 +5,7 @@
 p {
     font-size: 15px;
     line-height: 29px;
-    color: rgba(92, 5, 53, 0.6);
+    color: rgba(28, 54, 83, 0.6);
     padding-bottom: 20px
 }
 
@@ -437,9 +437,9 @@ section .header {
 }
 
 .hero .hero-content img {
-    width: 70%;
-    margin-bottom: 5%;
-    margin-top: 35%
+    width: 55%;
+    margin-bottom: 12%;
+    margin-top: 12%
 }
 
 .navigation {
@@ -451,7 +451,7 @@ section .header {
 
 .fixed {
     position: fixed;
-    background-color: rgba(38, 7, 38, 0.88);
+    background-color: rgba(55, 36, 40, 0.88);
     z-index: 999;
     width: 100%
 }
@@ -480,7 +480,7 @@ header .logo {
 }
 
 header .logo img {
-    height: 50px
+    height: 70px
 }
 
 header ul.primary-nav {
@@ -1011,8 +1011,6 @@ header .member-actions {
 .rsvp .rsvp-form .form-input-group i.fa-user,
 .rsvp .rsvp-form .form-input-group i.fa-users,
 .rsvp .rsvp-form .form-input-group i.fa-envelope,
-.rsvp .rsvp-form .form-input-group i.fa-briefcase,
-.rsvp .rsvp-form .form-input-group i.fa-envelope-open-o,
 .rsvp .rsvp-form .form-input-group .fa-key {
     font-size: 14px;
     position: absolute;
