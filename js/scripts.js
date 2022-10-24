@@ -194,7 +194,7 @@ $(document).ready(function () {
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Dec 02, 2022 00:00'),
+            end: new Date('Dec 02, 2022 23:59'),
 
             // Event Address
             address: 'LOTUS 1 & 2, RAGHULEELA BANQUETS, MUMBAI, INDIA',
