@@ -484,7 +484,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
-                                    <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                    <i class="fa fa-book"></i><input type="number" name="invite_code" id="invite_code"
                                         class="" min="0" placeholder="Invite code" required>
                                 </div>
                             </div>
@@ -568,7 +568,7 @@ $('#rsvp-form').on('submit', function (e) {
 
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-    if (MD5($('#invite_code').val()) !== 'c0acf572be7fe40ba538ff38d9a9d01b') {
+    if (($('#invite_code').val()) !== '021222') {
         $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
     } else {
         $.post('https://script.google.com/macros/s/AKfycbyi8H-LsLtmXQ1BjWLuEiprru7qaA_4Okv5LA7Wu1pJKg-vXSO3QHTgNY3foUiDYSmu/exec', data)
