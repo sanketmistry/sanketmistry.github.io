@@ -492,6 +492,12 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-input-group">
+                                    <i class="fa fa-key"></i><input type="text" name="message" id="message"
+                                        class="" min="0" placeholder="Message for couple" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="form-input-group">
                                     <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
                                         class="" min="0" placeholder="Invite code" required>
                                 </div>
@@ -566,6 +572,36 @@ function initMap() {
         map: map
     });
 }
+    </script>
+
+    <script>
+        /********************** RSVP **********************/
+$('#rsvp-form').on('submit', function (e) {
+    e.preventDefault();
+    var data = $(this).serialize();
+
+    $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+
+    if (MD5($('#invite_code').val()) !== 'c0acf572be7fe40ba538ff38d9a9d01b'
+        && MD5($('#invite_code').val()) !== '2d5b1c6a842b1f669d976472cc52e371') {
+        $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+    } else {
+        $.post('https://script.google.com/macros/s/AKfycbyi8H-LsLtmXQ1BjWLuEiprru7qaA_4Okv5LA7Wu1pJKg-vXSO3QHTgNY3foUiDYSmu/exec', data)
+            .done(function (data) {
+                console.log(data);
+                if (data.result === "error") {
+                    $('#alert-wrapper').html(alert_markup('danger', data.message));
+                } else {
+                    $('#alert-wrapper').html('');
+                    $('#rsvp-modal').modal('show');
+                }
+            })
+            .fail(function (data) {
+                console.log(data);
+                $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+            });
+    }
+});
     </script>
 </body>
 
