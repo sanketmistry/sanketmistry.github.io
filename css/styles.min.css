@@ -438,8 +438,8 @@ section .header {
 
 .hero .hero-content img {
     width: 55%;
-    margin-bottom: 12%;
-    margin-top: 12%
+    margin-bottom: 5%;
+    margin-top: 35%
 }
 
 .navigation {
@@ -480,7 +480,7 @@ header .logo {
 }
 
 header .logo img {
-    height: 70px
+    height: 50px
 }
 
 header ul.primary-nav {
