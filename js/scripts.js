@@ -197,7 +197,7 @@ $(document).ready(function () {
             end: new Date('Dec 02, 2022 23:59'),
 
             // Event Address
-            address: 'LOTUS 1 & 2, RAGHULEELA BANQUETS, MUMBAI, INDIA',
+            address: 'RAGHULEELA BANQUETS, MUMBAI, INDIA',
 
             // Event Description
             description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Rajesh Mistry at +91 9820309032."
