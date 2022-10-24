@@ -569,7 +569,7 @@ $('#rsvp-form').on('submit', function (e) {
     $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
     if (($('#invite_code').val()) !== '021222') {
-        $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code ',($('#invite_code').val()),' is incorrect.'));
     } else {
         $.post('https://script.google.com/macros/s/AKfycbyi8H-LsLtmXQ1BjWLuEiprru7qaA_4Okv5LA7Wu1pJKg-vXSO3QHTgNY3foUiDYSmu/exec', data)
             .done(function (data) {
