@@ -1197,7 +1197,8 @@ figure {
 }
 
 img {
-    vertical-align: middle
+    vertical-align: middle;
+    width: -webkit-fill-available;
 }
 
 .img-responsive,
