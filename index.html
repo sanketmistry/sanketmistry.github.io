@@ -35,6 +35,10 @@
     <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js">
+  </script>
 </head>
 
 <body id="top">
@@ -366,7 +370,12 @@
                         <h3 class="text-center section-padding">Did you miss it?</h3>
                         <h5>Our wedding highlights <span class="time">2 - 3 days fun</span></h5>
                         <p>
-                            <iframe src="https://drive.google.com/file/d/1czDl_0xwhm5KGtgkEJzhkKVTsSubMHX0/preview" width="320" height="240" allow="autoplay"></iframe>
+                            <!--<iframe src="https://drive.google.com/file/d/1czDl_0xwhm5KGtgkEJzhkKVTsSubMHX0/preview" width="320" height="240" allow="autoplay"></iframe>-->
+
+                            <div id="player"></div>
+                                <script>
+                                    var player = new Clappr.Player({source: "http://your.video/here.mp4", parentId: "#player"});
+                                </script>
                         </p>
                         
                     </div>
